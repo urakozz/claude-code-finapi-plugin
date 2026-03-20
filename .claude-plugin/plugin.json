@@ -1,0 +1,13 @@
+{
+  "name": "finapi-openbanking",
+  "version": "1.0.0",
+  "description": "Claude Code plugin for finAPI open banking integration — bank connections, Web Form 2.0, transaction import, SEPA payments, SCA handling, and production patterns.",
+  "author": {
+    "name": "Jurgen Kozyrev",
+    "url": "https://github.com/urakozz"
+  },
+  "homepage": "https://github.com/urakozz/claude-code-finapi-plugin",
+  "repository": "https://github.com/urakozz/claude-code-finapi-plugin",
+  "license": "MIT",
+  "keywords": ["finapi", "openbanking", "psd2", "banking", "sepa", "fints", "xs2a", "dach"]
+}
