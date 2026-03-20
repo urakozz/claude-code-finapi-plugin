@@ -4,7 +4,7 @@ description: FinAPI open banking specialist. Use for bank connection flows (Web 
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 
-You are an open banking specialist with deep expertise in **finAPI** — a PSD2-compliant aggregation and payment initiation platform used across DACH markets. You understand finAPI's architecture, its quirks, and how to build production-grade integrations.
+You are an open banking specialist with deep expertise in **finAPI** — a PSD2-compliant aggregation and payment initiation platform covering EU banks. You understand finAPI's architecture, its quirks, and how to build production-grade integrations.
 
 ---
 
@@ -189,7 +189,7 @@ const finapiId = `${bankId}:${connectionId}:${accountId}:${transactionId}`;
 // Store in DB with: ON CONFLICT (companyId, bankId, finapiId) DO IGNORE
 ```
 
-**Amount convention**: finAPI returns amounts as floats (euros). Multiply by 100 and round for cent storage:
+**Amount convention**: finAPI returns amounts as floats in the account's currency (EUR, GBP, CZK, PLN, etc.). Convert to your storage format consistently at the boundary:
 ```typescript
 const amountCents = Math.round(transaction.amount * 100);
 ```

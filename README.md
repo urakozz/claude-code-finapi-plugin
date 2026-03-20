@@ -1,6 +1,6 @@
 # claude-code-finapi-plugin
 
-A [Claude Code](https://claude.ai/code) plugin for **finAPI open banking** integration — built from production experience implementing PSD2-compliant bank connections, transaction import, and SEPA payment initiation in DACH markets.
+A [Claude Code](https://claude.ai/code) plugin for **finAPI open banking** integration — built from production experience implementing PSD2-compliant bank connections, transaction import, and SEPA payment initiation across the EU.
 
 ## What's included
 
@@ -60,7 +60,7 @@ Or reference it in conversation — Claude will pick it up from the description.
 
 | Gotcha | Rule enforced |
 |--------|--------------|
-| Wrong amount unit | finAPI returns euros (float); always `Math.round(amount * 100)` for cent storage |
+| Wrong amount unit | finAPI returns amounts as floats in the account's currency — convert to your storage format consistently at the boundary |
 | Silent payment rejection | Sanitize all strings: umlauts → ASCII, strip unsupported chars, enforce length limits |
 | Token expiry mid-request | Cache tokens, refresh 60s before expiry |
 | Broken embedded web form | Set `layoutConfig` explicitly — Shadow DOM breaks viewport detection |
